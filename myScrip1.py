@@ -61,7 +61,7 @@ sess.run(tf.global_variables_initializer())
 
 for i in range(1000):
     batch_xs, batch_ys = mnist.train.next_batch(100)
-    sess.run(train_step, feed_dict={xs:batch_xs, ys:batch_ys, keep_prob: 0.5})
+    sess.run(train_step, feed_dict={xs:batch_xs, ys:batch_ys, keep_prob: 0.4})
     if i %50 == 0:
         print(compute_accuracy(
             mnist.test.images[:1000], mnist.test.labels[:1000]))
